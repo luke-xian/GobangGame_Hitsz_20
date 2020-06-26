@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns="http://xmlns.jcp.org/xml/ns/javaee">
+<servlet>  
+     <!-- 类名 -->  
+    <servlet-name>mainframe</servlet-name>  
+    <!-- 所在的包 -->  
+    <servlet-class>bin.mainframe</servlet-class>
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>mainframe</servlet-name>  
+    <!-- 访问的网址 -->  
+    <url-pattern>/Game/mainframe</url-pattern>  
+    </servlet-mapping>  
+</web-app>
+  

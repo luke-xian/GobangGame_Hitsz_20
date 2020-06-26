@@ -1,0 +1,33 @@
+<html>
+    <meta charset="UTF-8">
+<head>
+    <link href="demo.css" rel="stylesheet" type="text/css" />
+    <title>五子棋</title>
+</head>
+<hr>
+
+<body>
+
+<div align="center">
+    <div id="msgDiv"><input type="text" id="nickname" placeholder="请输入昵称"><input type="button" value="连接" id="connBtn">
+    </div>
+</div>
+
+<canvas id="chess" width="450px" height="450px" onload="demo.onload()"></canvas>
+
+Welcome<br/><input id="text" type="text"/>
+<button onclick="send()">发送消息</button>
+<hr/>
+<button onclick="closeWebSocket()">关闭WebSocket连接</button>
+<hr/>
+<div id="message"></div>
+
+<script type="text/javascript" src="demo.js"></script>
+<script>drawLine()</script>
+  
+</body>
+
+
+<hr>
+
+</html>
