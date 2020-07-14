@@ -1,33 +1,77 @@
 <html>
-    <meta charset="UTF-8">
+
 <head>
-    <link href="demo.css" rel="stylesheet" type="text/css" />
+    <link href="css/demo.css" rel="stylesheet" type="text/css" />
     <title>五子棋</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+    <script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    
 </head>
-<hr>
 
 <body>
 
-<div align="center">
-    <div id="msgDiv"><input type="text" id="nickname" placeholder="请输入昵称"><input type="button" value="连接" id="connBtn">
-    </div>
+<div class="table_0" style="width:1440px;height:800px">
+
+	<h1 align="center" style="color:purple;font-family:楷体;font-weight:bold ">
+	五子棋
+	</h1>
+	
+	<div class="player">
+		<div id="chess1" class="chess1"></div>
+		<div id="userno" class="circle1">昵称</div>
+		<div id="systemshow" class="square">正在登录</div>
+		<div id="chess2" class="chess2"></div>
+		<div id="opponent" class="circle2">对手</div>
+	</div>
+	
+	
+	<div class="window_1">
+		<div id="message" class="message">
+		</div>
+		
+			<div class="input-group">
+					<input id="text" type="text" class="form-control" placeholder="给所有人发消息">
+					<span class="input-group-btn">
+						<button onclick="send()" class="btn btn-info" type="button" >
+							发送
+						</button>
+					</span>
+				</div><!-- /input-group -->
+
+	</div>
+	
+	<canvas id="chess" width="480px" height="480px" onload="demo.onload()" ></canvas>
+	<script type="text/javascript" src="js/demo.js"></script>
+	<script>drawLine()</script>
+	
+	    <div class="beginwindow">
+	    	<div class="input-group">
+	         	<input type="text" id="nickname" placeholder="请输入昵称并点击登录" class="form-control">
+					<span class="input-group-btn">				  					  
+	  					  <button id="login" onclick="login()" type="button" class="btn btn-primary">登录</button> 
+	  					  				  			
+					</span>
+					<button id="onemore" onclick="onemore()" type="button" class="btn btn-success">再来一局</button>
+					<button id="end" onclick="closeWebSocket()" type="button" class="btn btn-danger">结束</button>
+							   	    
+	    </div>
+
+
+</div>				
 </div>
 
-<canvas id="chess" width="450px" height="450px" onload="demo.onload()"></canvas>
 
-Welcome<br/><input id="text" type="text"/>
-<button onclick="send()">发送消息</button>
-<hr/>
-<button onclick="closeWebSocket()">关闭WebSocket连接</button>
-<hr/>
-<div id="message"></div>
-
-<script type="text/javascript" src="demo.js"></script>
-<script>drawLine()</script>
-  
 </body>
 
+ <!-- <input type="button" value="连接" id="connBtn"> -->
 
-<hr>
+
+
+
 
 </html>
